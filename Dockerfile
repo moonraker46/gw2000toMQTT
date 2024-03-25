@@ -1,5 +1,6 @@
 FROM node:16.13-alpine3.15
-RUN apk update && apk add git wget ca-certificates 
+RUN apk update && apk add git 
+RUN git config --global http.sslVerify false
 
 WORKDIR /app
 RUN cd /app
